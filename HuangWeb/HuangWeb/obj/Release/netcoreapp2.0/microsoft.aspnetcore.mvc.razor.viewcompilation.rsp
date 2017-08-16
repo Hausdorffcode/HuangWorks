@@ -1,0 +1,12 @@
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=HuangWeb
+--content-root=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Home\About.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Home\Contact.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Home\Index.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Shared\Error.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Shared\_Layout.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\_ViewImports.cshtml
+--file=C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\Views\_ViewStart.cshtml

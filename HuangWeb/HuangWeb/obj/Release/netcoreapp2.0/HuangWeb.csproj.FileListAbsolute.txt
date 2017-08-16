@@ -1,0 +1,10 @@
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\bin\Release\netcoreapp2.0\HuangWeb.deps.json
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\bin\Release\netcoreapp2.0\HuangWeb.runtimeconfig.json
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\bin\Release\netcoreapp2.0\HuangWeb.runtimeconfig.dev.json
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\bin\Release\netcoreapp2.0\HuangWeb.dll
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\bin\Release\netcoreapp2.0\HuangWeb.pdb
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\obj\Release\netcoreapp2.0\HuangWeb.csproj.CoreCompileInputs.cache
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\obj\Release\netcoreapp2.0\HuangWeb.AssemblyInfoInputs.cache
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\obj\Release\netcoreapp2.0\HuangWeb.AssemblyInfo.cs
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\obj\Release\netcoreapp2.0\HuangWeb.dll
+C:\Users\huangqiming\Documents\GitHub\HuangWorks\HuangWeb\HuangWeb\obj\Release\netcoreapp2.0\HuangWeb.pdb
