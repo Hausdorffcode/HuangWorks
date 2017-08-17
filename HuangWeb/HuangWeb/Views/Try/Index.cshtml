@@ -1,0 +1,36 @@
+﻿@{ 
+    ViewData["Title"] = "Try Index";
+}
+<h2>MVC项目中的信息传送</h2>
+<hr />
+<h3>Action到View</h3>
+<ul>
+    <li>
+        @Html.ActionLink("ViewData的使用", "UseViewData")
+    </li>
+    <li>
+        @Html.ActionLink("ViewBag的使用", "UseViewBag")
+    </li>
+    <li>
+        @Html.ActionLink("ViewModel设计模式使用示例", "UseViewModel")
+    </li>
+</ul>
+
+<hr />
+<h3>“模型绑定（Model Bind）”机制示例</h3>
+<ul>
+    <li>
+        @Html.ActionLink("使用匿名对象封装路由信息，计算1 + 2", "Add", "try", new { one = 1, two = 2 }, null)
+    </li>
+    <li>
+        @Html.ActionLink("Get和Post配对的Action", "GetAndPost")
+    </li>
+</ul>
+
+<hr />
+<h3>Action到Action间的信息传送</h3>
+
+<ul>
+    <li>@Html.ActionLink("使用TempData在Action中间传送数据", "TempDataExample")</li>
+    <li>@Html.ActionLink("使用Session保存状态", "UseSession")</li>
+</ul>
