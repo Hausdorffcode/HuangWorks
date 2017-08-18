@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HuangWeb.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace HuangWeb.Controllers
 {
@@ -50,7 +51,7 @@ namespace HuangWeb.Controllers
         }
 
         /// <summary>
-        /// 利用get方法的模型绑定从View向Controller中传输信息
+        /// 利用get方法的模型绑定从View向Controller中传递信息
         /// </summary>
         /// <param name="one"></param>
         /// <param name="two"></param>
@@ -61,10 +62,68 @@ namespace HuangWeb.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 利用post方法从View向Controller中传递信息
+        /// 注意get，post的编程方式
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetAndPost()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult GetAndPost(GetAndPostViewModel model)
+        {
+            return View("GetAndPostResult", model);
+        }
+
+        /// <summary>
+        /// use TempData to pass message from Action to Action
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult UseTempData()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult UseTempData(string message)
+        {
+            TempData["info"] = message;
+            return RedirectToAction("ShowMessage");
+        }
+        public IActionResult ShowMessage()
+        {
+            if (TempData["info"] != null)
+            {
+                return Content(TempData["info"].ToString());
+            }
+            return Content("No Message!");
+        }
+
+        /// <summary>
+        /// 在多次http请求中记住状态
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult UseSession()
+        {
+            ViewBag.Message = "please click the button";
+            return View();
+        }
+        [HttpPost]
+        public IActionResult UseSessionPostBack()
+        {
+            int? clickCnt = HttpContext.Session.GetInt32("ClickCount");
+            if (!clickCnt.HasValue)
+            {
+                HttpContext.Session.SetInt32("ClickCount", 0);
+                clickCnt = 0;
+            }
+            clickCnt++;
+            HttpContext.Session.SetInt32("ClickCount", clickCnt.Value);
+            ViewBag.Message = $"had clicked {clickCnt} times.";
+            return View("UseSession");
         }
     }
 }

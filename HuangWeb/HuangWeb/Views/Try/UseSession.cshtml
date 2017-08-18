@@ -1,0 +1,11 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<form class="text-center" asp-controller="Try" asp-action="UseSessionPostBack" method="post">
+    <h2>使用Session</h2>
+    <button class="btn btn-default" type="submit">Click Me!</button>
+    <h3 class="text-info">@ViewBag.Message</h3>
+</form>
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>

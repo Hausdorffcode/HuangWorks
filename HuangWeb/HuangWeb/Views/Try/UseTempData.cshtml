@@ -1,0 +1,16 @@
+﻿<h2>使用TempData在两个请求之间传送信息</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>要传送的信息</legend>
+        <input type="text" id="message" name="message" />
+        <br />
+        <br />
+        <input type="submit" />
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>

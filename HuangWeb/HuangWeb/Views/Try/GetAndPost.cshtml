@@ -1,0 +1,35 @@
+﻿@model HuangWeb.Models.GetAndPostViewModel
+
+<h2>Get And Post</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>输入相关信息</legend>
+        <div>
+            @Html.LabelFor(model => model.Value)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Value)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Info)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Info)
+        </div>
+
+        <p>
+            <br />
+            <input type="submit" value="提交" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>
+
