@@ -19,12 +19,10 @@ namespace HuangWeb.Middlewares
             _options = options;
         }
 
-        public async Task Invoke(HttpContext httpContext)
+        public Task Invoke(HttpContext httpContext)
         {
-            //httpContext.Response.ContentType = "text/html, charset=utf-8";
-            await httpContext.Response.WriteAsync($"<h2>MyMiddleware {GetHashCode()} do request {_options.GetMessage()}</h2>");
-            httpContext.Items["info"] = $"<h2>the info pass through middlewares: {DateTime.Now}</h2>";
-            await _next(httpContext);
+            httpContext.Items["info"] += $"<h2>MyMiddleware {GetHashCode()} do request {_options.GetMessage()}</h2>";
+            return _next(httpContext);
         }
     }
 

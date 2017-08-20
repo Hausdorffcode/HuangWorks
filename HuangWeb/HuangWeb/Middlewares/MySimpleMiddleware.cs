@@ -17,13 +17,10 @@ namespace HuangWeb.Middlewares
             _next = next;
         }
 
-        public async Task Invoke(HttpContext httpContext)
+        public Task Invoke(HttpContext httpContext)
         {
-            //httpContext.Response.ContentType = "text/html,charset=utf-8";
-            await httpContext.Response.WriteAsync($"<h2>my simpleMiddleWare {GetHashCode()} start do request {httpContext.Request.Path}.</h2>");
-            await _next.Invoke(httpContext);
-            await httpContext.Response.WriteAsync($"<h2>my simpleMiddleWare {GetHashCode()} end do request {httpContext.Request.Path}.</h2>");
-            
+            httpContext.Items["info"] += $"<h2>my simpleMiddleWare {GetHashCode()} start do request {httpContext.Request.Path}.</h2>";
+            return _next.Invoke(httpContext);
         }
     }
 

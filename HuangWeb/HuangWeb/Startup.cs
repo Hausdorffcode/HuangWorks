@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace HuangWeb
 {
@@ -53,15 +54,15 @@ namespace HuangWeb
 
             app.Use(async (context, next) =>
             {
-                context.Response.ContentType = "text/html;charset=utf-8";
-                await context.Response.WriteAsync($"<h2>lambda middleware</h2>");
+                context.Items["info"] += $"<h2>use lambda as middleware {DateTime.Now}</h2>";
                 await next();
             });
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(context.Items["info"].ToString());
-                await context.Response.WriteAsync($"<h2>the last simple middleware</h2>");
+                context.Response.ContentType = "text/html;charset=utf-8";
+                string s = context.Items["info"].ToString();
+                await context.Response.WriteAsync(s);
             });
         }
     }
